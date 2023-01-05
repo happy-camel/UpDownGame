@@ -11,7 +11,6 @@ public class Database {
     private ArrayList<Integer> diff = new ArrayList<>();
     private ArrayList<Integer> trysave = new ArrayList<>();
 
-
     public int getRandom() {
         return random;
     }
@@ -23,7 +22,6 @@ public class Database {
     public ArrayList<Integer> getDiff() {
         return diff;
     }
-
 
     public ArrayList<Integer> getTrysave() {
         return trysave;

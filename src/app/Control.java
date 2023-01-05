@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Control {
 
     private int guessNumber;
-
     private int inputNumber;
     Database database;
 
@@ -20,10 +19,8 @@ public class Control {
 
         guessNumber = database.getRandom();
 
-
         //2.  사용자 입력 받기
         Scanner in = new Scanner(System.in);
-
 
         while (true) {
             System.out.println();
@@ -42,7 +39,7 @@ public class Control {
             database.addToInputList(inputNumber);
             database.addToDiffList(Math.abs(diff));
 
-
+            //비교하기 편하게 이터레이터 추가해보기
             //3. 입력한 수가 guessNumber보다 크면 Down, 작으면 Up 이라고 출력
             if (diff>0){
                 System.out.println("제가 생각한 값이 입력값보다 큽니다");
@@ -61,12 +58,5 @@ public class Control {
         System.out.println(database.getTrysave());
         System.out.println(database.getDiff());
         //7. 종료 및 메세지 출력
-
-        //랜덤 생성 메소드
-        //반복문
-        //스캔이프로 입력 받기
-        //이프문으로
-
-
     }
 }
