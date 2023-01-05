@@ -33,25 +33,29 @@ public class Control {
     private void userInputNumber() {
         Scanner in = new Scanner(System.in);
 
-        while (true) {
-            System.out.println();
-            input10To99(in);
-            int diff = guessNumber-inputNumber;
-            database.addToInputList(inputNumber);
-            database.addToDiffList(Math.abs(diff));
+        compareNumber(in);
+    }
+
+    private void compareNumber(Scanner in) {
+        System.out.println();
+        input10To99(in);
+        int diff = guessNumber-inputNumber;
+        database.addToInputList(inputNumber);
+        database.addToDiffList(Math.abs(diff));
 
             //비교하기 편하게 이터레이터 추가해보기
             //3. 입력한 수가 guessNumber보다 크면 Down, 작으면 Up 이라고 출력
-            if (diff>0){
-                System.out.println("제가 생각한 값이 입력값보다 큽니다");
-            } else if (diff<0) {
-                System.out.println("제가 생각한 값이 입력값보다 작습니다");
-            } else {
-                System.out.println("맞췄습니다!");
-                break;
-            }
+        if (diff>0){
+            System.out.println("제가 생각한 값이 입력값보다 큽니다");
+        } else if (diff<0) {
+            System.out.println("제가 생각한 값이 입력값보다 작습니다");
+        } else {
+            System.out.println("맞췄습니다!");
+            return;
         }
+        compareNumber(in);
     }
+
     private void input10To99(Scanner in) {
         System.out.println("10~99사이의 숫자를 입력해 주세요");
             //nextInt는 버그가 많다

@@ -29,7 +29,7 @@ public class Database {
     }
 
 
-    //1. 10~99까지의 숫자를 생성 메소드로..
+    //1. 10~99까지의 숫자를 메소드로 생성
 
     public void generateGuessNumber(){
         setRandom((int) (Math.random()*90+10));
