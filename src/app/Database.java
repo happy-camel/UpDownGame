@@ -2,6 +2,7 @@ package app;
 
 import java.net.SocketTimeoutException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Database {
     //랜덤숫자 저장 객체
@@ -31,7 +32,7 @@ public class Database {
     //1. 10~99까지의 숫자를 생성 메소드로..
 
     public void generateGuessNumber(){
-        setRandom((int) Math.random()*90+10);
+        setRandom((int) (Math.random()*90+10));
         System.out.println("랜덤숫자 생성을 완료했습니다");
     }
 
@@ -42,5 +43,5 @@ public class Database {
     public void addToDiffList(int number){
         diff.add(number);
     }
-
 }
+
