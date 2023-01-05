@@ -52,7 +52,6 @@ public class Control {
             }
         }
     }
-
     private void input10To99(Scanner in) {
         System.out.println("10~99사이의 숫자를 입력해 주세요");
             //nextInt는 버그가 많다
